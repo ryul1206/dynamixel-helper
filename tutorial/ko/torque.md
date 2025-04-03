@@ -1,9 +1,12 @@
+
 # 토크 켜기/끄기
 
-🌏 [English](torque.en.md), [한국어](torque.kr.md)
+🌏
+[**English**](../en/torque.md) |
+한국어
 
-- 다음 튜토리얼: [다중 USB 포트](multiple_ports.kr.md)
-- [튜토리얼 전체 목차로 돌아가기](TUTORIAL.kr.md)
+- 다음 튜토리얼: [다중 USB 포트](multiple_ports.md)
+- [튜토리얼 전체 목차로 돌아가기](TUTORIAL.md)
 
 ---
 
@@ -50,5 +53,5 @@ motor.set_torque(True)
 
 ---
 
-- 다음 튜토리얼: [다중 USB 포트](multiple_ports.kr.md)
-- [튜토리얼 전체 목차로 돌아가기](TUTORIAL.kr.md)
+- 다음 튜토리얼: [다중 USB 포트](multiple_ports.md)
+- [튜토리얼 전체 목차로 돌아가기](TUTORIAL.md)

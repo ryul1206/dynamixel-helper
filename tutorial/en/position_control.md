@@ -1,9 +1,12 @@
+
 # Position Control
 
-🌏 [English](position_control.en.md), [한국어](position_control.kr.md)
+🌏
+English |
+[**한국어**](../ko/position_control.md)
 
 - Next Tutorial: Not yet.
-- [Back to the tutorial front page](TUTORIAL.en.md)
+- [Back to the tutorial front page](TUTORIAL.md)
 
 ---
 
@@ -25,4 +28,4 @@ motor.set_goal_position((dxl_unit + 2000) % 4096)
 ---
 
 - Next Tutorial: Not yet.
-- [Back to the tutorial front page](TUTORIAL.en.md)
+- [Back to the tutorial front page](TUTORIAL.md)

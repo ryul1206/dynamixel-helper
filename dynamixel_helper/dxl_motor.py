@@ -110,28 +110,31 @@ class DxlMotor(object):
         # flags
         success = False
         failed_at_least_once = False
-        
-        # Get all cases of (port, packet) tuples
+
+        # Try all combinations of (port, packet, baud)
         for port, packet in product(port_handlers, packet_handlers):
-            self.port_handler = port_handlers[port]['handler']
+            port_info = port_handlers[port]
+            self.port_handler = port_info['handler']
             self.packet_handler = packet_handlers[packet]
 
-            original_baud = port_handlers[port]['baud rate']
+            # If baud rate is already set, try only that rate
+            valid_baud = port_info['baud rate']
+            baud_rates_to_try = [valid_baud] if valid_baud is not None else baud_list
 
-            for baud in baud_list:
-                if original_baud is None:
+            for baud in baud_rates_to_try:
+                if valid_baud is None:
                     self.port_handler.setBaudRate(baud)
-                else:
-                    continue
+
                 pose, success = self.get_present_position()
                 if success:
                     self.port_name = port
                     self.protocol = packet
                     self.baud = baud
-                    port_handlers[port]['baud rate'] = baud
+                    if valid_baud is None:
+                        port_info['baud rate'] = baud
                     break
-                else:
-                    failed_at_least_once = True
+                failed_at_least_once = True
+
             if success:
                 break
 
@@ -198,7 +201,7 @@ class DxlMotor(object):
 
     def set_operating_mode(self, mode):
         """Change operating mode.(EEPROM)
-        
+
         Return:
             <bool> True is a success. False is a fail.
         Raises:
@@ -233,7 +236,7 @@ class DxlMotor(object):
 
     def get_torque(self):
         """Read the torque.
-        
+
         Return:
             [0]: <bool> True is enabled. False is disabled.
             [1]: <bool> True is a success. False is a fail.

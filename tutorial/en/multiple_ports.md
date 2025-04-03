@@ -1,17 +1,20 @@
+
 # Define Motors in `preset.json`
 
-🌏 [English](multiple_ports.en.md), [한국어](multiple_ports.kr.md)
+🌏
+English |
+[**한국어**](../ko/multiple_ports.md)
 
 > This tutorial is for anyone who needs multiple USB ports. If you use only one USB cable, you can skip this.
 
-- Next Tutorial: [Position Control](position_control.en.md)
-- [Back to the tutorial front page](TUTORIAL.en.md)
+- Next Tutorial: [Position Control](position_control.md)
+- [Back to the tutorial front page](TUTORIAL.md)
 
 ---
 
 ## Multiple USB Ports
 
-You learned how to create a preset in [the first tutorial](make_preset.en.md). Do you remember defining the port as shown below?
+You learned how to create a preset in [the first tutorial](make_preset.md). Do you remember defining the port as shown below?
 
 ```json
 "ports":[ "/dev/ttyUSB0" ],
@@ -52,5 +55,5 @@ Now be free from the order of USB plug-in.😄
 
 ---
 
-- Next Tutorial: [Position Control](position_control.en.md)
-- [Back to the tutorial front page](TUTORIAL.en.md)
+- Next Tutorial: [Position Control](position_control.md)
+- [Back to the tutorial front page](TUTORIAL.md)

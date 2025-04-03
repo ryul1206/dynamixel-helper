@@ -1,8 +1,11 @@
+
 # Tutorials of Dynamixel Helper
 
-[Back to Homepage](https://github.com/ryul1206/easy-dynamixel-helper)
+[Back to Homepage](https://github.com/ryul1206/dynamixel-helper)
 
-🌏 [English](TUTORIAL.en.md), [한국어](TUTORIAL.kr.md)
+🌏
+English |
+[**한국어**](../ko/TUTORIAL.md)
 
 **Important**
 
@@ -14,10 +17,10 @@
 
 All beginner level tutorials are written for beginners who are not familiar with programming.
 
-1. [Define Motors in `preset.json`](make_preset.en.md)
-2. [Torque On/Off](torque.en.md)
-3. [Multiple USB ports](multiple_ports.en.md)
-4. [Position Control](position_control.en.md)
+1. [Define Motors in `preset.json`](make_preset.md)
+2. [Torque On/Off](torque.md)
+3. [Multiple USB ports](multiple_ports.md)
+4. [Position Control](position_control.md)
 
 ---
 

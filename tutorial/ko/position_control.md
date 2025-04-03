@@ -1,9 +1,12 @@
+
 # 위치 제어
 
-🌏 [English](position_control.en.md), [한국어](position_control.kr.md)
+🌏
+[**English**](../en/position_control.md) |
+한국어
 
 - 다음 튜토리얼: 준비되지 않았습니다.
-- [튜토리얼 전체 목차로 돌아가기](TUTORIAL.kr.md)
+- [튜토리얼 전체 목차로 돌아가기](TUTORIAL.md)
 
 ---
 
@@ -25,4 +28,4 @@ motor.set_goal_position((dxl_unit + 2000) % 4096)
 ---
 
 - 다음 튜토리얼: 준비되지 않았습니다.
-- [튜토리얼 전체 목차로 돌아가기](TUTORIAL.kr.md)
+- [튜토리얼 전체 목차로 돌아가기](TUTORIAL.md)

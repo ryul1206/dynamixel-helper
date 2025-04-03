@@ -1,15 +1,5 @@
 # Release Notes
 
-1. [1.0.1 (2020.08.10)](#101-20200810)
-2. [1.0.0 (2019.08.07)](#100-20190807)
-3. [0.0.0 (2019.07.22)](#000-20190722)
-
-<!--
-Major: 호환성에 영향을 줄 정도의 큰 변경
-Minor: 기능 업데이트
-Patch: 버그 픽스 또는 컨트롤테이블 추가
--->
-
 <!-- Tags
 NEW : added new feature
 FIXED : bug fixed
@@ -18,6 +8,10 @@ REMOVED : feature removed
 OTHER
 TESTED
 -->
+
+## 1.0.2 (2025.04.04)
+
+* **FIXED**: Fix motor check bug when baudrate is already set (#4)
 
 ## 1.0.1 (2020.08.10)
 
@@ -31,7 +25,7 @@ TESTED
 
 * **NEW**: **Auto matching process for the port, baud-rate, and protocol**
 * **NEW**: **Auto keyword for the baud-rate, protocol**
-* **NEW**: The basic [tutorials](./tutorial/TUTORIAL.en.md)
+* **NEW**: The basic [tutorials](./tutorial/en/TUTORIAL.md)
 * **NEW**: Add the control table of `XM430-W250`
 * **NEW**: set_drive_mode, set_operating_mode, get_torque, set_goal_velocity, get_present_velocity
 * **REMOVED**: Old style json. Now, we are in the new version.
@@ -52,7 +46,7 @@ TESTED
 
 * **NEW**: Basic features (torque on/off and position command)
 * **NEW**: Apply [CodeFactor](https://www.codefactor.io/) to manage code quality
-* **NEW**: Multilangual README and tutorials (We are using [Multilingual Markdown Generator](https://github.com/ryul1206/multilingual-markdown)!!)
+* **NEW**: multilingual README and tutorials (We are using [Multilingual Markdown Generator](https://github.com/ryul1206/multilingual-markdown)!!)
 * **TESTED**: Test basic features with actual motor(XM430-W210) in Python 2.x and 3.x
     - set_torque
     - set_goal_position

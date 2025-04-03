@@ -1,0 +1,41 @@
+[project]
+name = "dynamixel_helper"
+version = "1.0.2"
+description = "A lightweight, intuitive tool that makes Dynamixel control easier—skip the complexity of the official SDK."
+readme = "README.md"
+authors = [
+    {name = "Hong-ryul Jung", email = "jung.hr.1206@gmail.com"},
+]
+license = "MIT"
+requires-python = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, <4"
+keywords = ["dynamixel"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 2",
+]
+dependencies = [
+    "dynamixel_sdk>=3",
+]
+
+[project.urls]
+Homepage = "https://github.com/ryul1206/dynamixel-helper"
+Changelog = "https://github.com/ryul1206/dynamixel-helper/blob/main/CHANGELOG.md"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = {find = {exclude = ["tutorial", "tests"]}}
+
+[tool.setuptools.package-data]
+dynamixel_helper = ["tables/*.json"]
+
+[tool.bdist_wheel]
+universal = 1
+
+[dependency-groups]
+dev = [
+    "build>=0.5.1",
+    "twine>=1.15.0",
+]

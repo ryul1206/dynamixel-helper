@@ -1,9 +1,12 @@
+
 # Define Motors in `preset.json`
 
-🌏 [English](make_preset.en.md), [한국어](make_preset.kr.md)
+🌏
+English |
+[**한국어**](../ko/make_preset.md)
 
-- Next Tutorial: [Torque On/Off](torque.en.md)
-- [Back to the tutorial front page](TUTORIAL.en.md)
+- Next Tutorial: [Torque On/Off](torque.md)
+- [Back to the tutorial front page](TUTORIAL.md)
 
 ---
 
@@ -52,7 +55,7 @@ For example, if your operating system is Linux and connected on `/dev/ttyUSB0`, 
 }
 ```
 
-If you are using multiple USB devices, I will explain that in [another tutorial](multiple_ports.en.md). For now, let's focus on just one motor.
+If you are using multiple USB devices, I will explain that in [another tutorial](multiple_ports.md). For now, let's focus on just one motor.
 
 ### "baud rates"
 
@@ -136,5 +139,5 @@ If you didn't use `"auto"`, the final `my_preset.json` would look like this:
 
 ---
 
-- Next Tutorial: [Torque On/Off](torque.en.md)
-- [Back to the tutorial front page](TUTORIAL.en.md)
+- Next Tutorial: [Torque On/Off](torque.md)
+- [Back to the tutorial front page](TUTORIAL.md)

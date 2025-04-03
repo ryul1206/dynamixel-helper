@@ -1,9 +1,12 @@
+
 # Torque On/Off
 
-🌏 [English](torque.en.md), [한국어](torque.kr.md)
+🌏
+English |
+[**한국어**](../ko/torque.md)
 
-- Next Tutorial: [Multiple USB ports](multiple_ports.en.md)
-- [Back to the tutorial front page](TUTORIAL.en.md)
+- Next Tutorial: [Multiple USB ports](multiple_ports.md)
+- [Back to the tutorial front page](TUTORIAL.md)
 
 ---
 
@@ -50,5 +53,5 @@ motor.set_torque(True)
 
 ---
 
-- Next Tutorial: [Multiple USB ports](multiple_ports.en.md)
-- [Back to the tutorial front page](TUTORIAL.en.md)
+- Next Tutorial: [Multiple USB ports](multiple_ports.md)
+- [Back to the tutorial front page](TUTORIAL.md)

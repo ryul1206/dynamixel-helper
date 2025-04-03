@@ -1,17 +1,20 @@
+
 # `preset.json`으로 모터 정의하기
 
-🌏 [English](multiple_ports.en.md), [한국어](multiple_ports.kr.md)
+🌏
+[**English**](../en/multiple_ports.md) |
+한국어
 
 > 이번 튜토리얼은 여러 개의 USB 포트가 필요한 사람을 위한 것입니다. USB 선을 하나만 쓴다면 건너뛰어도 좋습니다.
 
-- 다음 튜토리얼: [위치 제어](position_control.kr.md)
-- [튜토리얼 전체 목차로 돌아가기](TUTORIAL.kr.md)
+- 다음 튜토리얼: [위치 제어](position_control.md)
+- [튜토리얼 전체 목차로 돌아가기](TUTORIAL.md)
 
 ---
 
 ## 다중 USB 포트
 
-[첫번째 튜토리얼](make_preset.kr.md)에서 프리셋을 만드는 법을 배웠습니다. 아래와 같이 포트를 정의했던 게 기억나시나요?
+[첫번째 튜토리얼](make_preset.md)에서 프리셋을 만드는 법을 배웠습니다. 아래와 같이 포트를 정의했던 게 기억나시나요?
 
 ```json
 "ports":[ "/dev/ttyUSB0" ],
@@ -51,5 +54,5 @@
 
 ---
 
-- 다음 튜토리얼: [위치 제어](position_control.kr.md)
-- [튜토리얼 전체 목차로 돌아가기](TUTORIAL.kr.md)
+- 다음 튜토리얼: [위치 제어](position_control.md)
+- [튜토리얼 전체 목차로 돌아가기](TUTORIAL.md)

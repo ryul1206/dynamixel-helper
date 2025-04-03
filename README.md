@@ -1,13 +1,14 @@
-# Easy Dynamixel Helper
+
+# Dynamixel Helper
 
 [![PyPI](https://img.shields.io/pypi/v/dynamixel-helper.svg)](https://pypi.org/project/dynamixel-helper/)
-[![Downloads](https://pepy.tech/badge/dynamixel-helper)](https://pepy.tech/project/dynamixel-helper)
-[![GitHub](https://img.shields.io/github/license/ryul1206/easy-dynamixel-helper.svg)](https://github.com/ryul1206/easy-dynamixel-helper/blob/master/LICENSE)
-[![CodeFactor](https://www.codefactor.io/repository/github/ryul1206/easy-dynamixel-helper/badge/master)](https://www.codefactor.io/repository/github/ryul1206/easy-dynamixel-helper)
-[![Multilingual Markdown Generator](https://img.shields.io/badge/markdown-multilingual%20🌐-ff69b4.svg)](https://github.com/ryul1206/multilingual-markdown)
+[![Total Downloads](https://pepy.tech/badge/dynamixel-helper)](https://pepy.tech/project/dynamixel-helper)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/dynamixel-helper)](https://pypi.org/project/dynamixel-helper/)
+[![GitHub](https://img.shields.io/github/license/ryul1206/dynamixel-helper.svg)](https://github.com/ryul1206/dynamixel-helper/blob/main/LICENSE)
 
-🌏 [English](https://github.com/ryul1206/easy-dynamixel-helper/blob/master/README.md),
-[한국어](https://github.com/ryul1206/easy-dynamixel-helper/blob/master/README.kr.md)
+🌏
+English |
+[**한국어**](https://github.com/ryul1206/dynamixel-helper/blob/main/README.ko.md)
 
 This helper is a wrapper for the Dynamixel-SDK. With this, configure and drive your motor more quickly. You do not need to know how the SDK works. In other words, this helper makes it easy to modify the control table.
 
@@ -17,20 +18,20 @@ pip install dynamixel_helper --user
 
 **Table of Contents**
 
-1. [ Features](#-Features)
-1. [ Simple Example](#-Simple-Example)
-1. [ Getting Started](#-Getting-Started)
-    1. [Prerequisites](#Prerequisites)
-    1. [Installation](#Installation)
-1. [ Tutorials](#-Tutorials)
-1. [ Release Notes](#-Release-Notes)
-1. [ Current Coverage](#-Current-Coverage)
-    1. [Model List](#Model-List)
-    1. [Control Table](#Control-Table)
-1. [ Contributing](#-Contributing)
-    1. [Style Guide](#Style-Guide)
-1. [ Maintainers](#-Maintainers)
-1. [ Licenses](#-Licenses)
+1. [Features](#-features)
+1. [Simple Example](#-simple-example)
+1. [Getting Started](#-getting-started)
+    1. [Prerequisites](#prerequisites)
+    1. [Installation](#installation)
+1. [Tutorials](#-tutorials)
+1. [Release Notes](#-release-notes)
+1. [Current Coverage](#-current-coverage)
+    1. [Model List](#model-list)
+    1. [Control Table](#control-table)
+1. [Contributing](#-contributing)
+    1. [Style Guide](#style-guide)
+1. [Maintainers](#-maintainers)
+1. [Licenses](#-licenses)
 
 ## 💎 Features
 
@@ -109,12 +110,12 @@ pip install dynamixel_helper --user
 
 ## 🌱 Tutorials
 
-[Go to tutorials](https://github.com/ryul1206/easy-dynamixel-helper/blob/master/tutorial/TUTORIAL.en.md)
+[Go to tutorials](https://github.com/ryul1206/dynamixel-helper/blob/main/tutorial/en/TUTORIAL.md)
 
 ## 🚩 Release Notes
 
 
-[Go to release notes](https://github.com/ryul1206/easy-dynamixel-helper/blob/master/CHANGELOG.md#Release-Notes)
+[Go to release notes](https://github.com/ryul1206/dynamixel-helper/blob/main/CHANGELOG.md#Release-Notes)
 
 ## 🔭 Current Coverage
 
@@ -145,6 +146,7 @@ Different models have slightly different control tables. Please check the docume
 
 - We will welcome whatever your contribution is!
 - If you are planning to send a new `Pull request`, please send them into the `develop` Branch.😍
+
 ### Style Guide
 
 > This style guide is only a recommendation, never more important than your interest and contributions.
@@ -171,7 +173,6 @@ Different models have slightly different control tables. Please check the docume
 
 ## 📜 Licenses
 
-The contents of this repository are subject to the [MIT License](https://github.com/ryul1206/easy-dynamixel-helper/blob/master/LICENSE) by default, except as noted below.
+The contents of this repository are subject to the [MIT License](https://github.com/ryul1206/dynamixel-helper/blob/main/LICENSE) by default, except as noted below.
 
-- Dynamixel SDK is under the [Apache-2.0](https://github.com/ROBOTIS-GIT/DynamixelSDK/blob/master/LICENSE)
-
+- Dynamixel SDK is under the [Apache-2.0](https://github.com/ROBOTIS-GIT/DynamixelSDK/blob/main/LICENSE)

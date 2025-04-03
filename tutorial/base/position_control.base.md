@@ -1,28 +1,35 @@
 <!---------------------------->
-<!-- multilangual suffix: en, kr -->
+<!-- multilingual suffix: en, ko -->
 <!---------------------------->
 
 <!-- [en] -->
 # Position Control
-<!-- [kr] -->
+<!-- [ko] -->
 # 위치 제어
 <!-- [common] -->
 
-🌏 [English](position_control.en.md), [한국어](position_control.kr.md)
+🌏
+<!-- [en] -->
+English |
+[**한국어**](../ko/position_control.md)
+<!-- [ko] -->
+[**English**](../en/position_control.md) |
+한국어
+<!-- [common] -->
 
 <!-- [en] -->
 - Next Tutorial: Not yet.
-- [Back to the tutorial front page](TUTORIAL.en.md)
-<!-- [kr] -->
+- [Back to the tutorial front page](TUTORIAL.md)
+<!-- [ko] -->
 - 다음 튜토리얼: 준비되지 않았습니다.
-- [튜토리얼 전체 목차로 돌아가기](TUTORIAL.kr.md)
+- [튜토리얼 전체 목차로 돌아가기](TUTORIAL.md)
 <!-- [common] -->
 
 ---
 
 <!-- [en] -->
 The basic `Operating Mode` of Dynamixel is `Position Control Mode`. So we used the remainder of 4096. 4096 represent one round in Dynamixel unit. For details, see the control table of each motor.
-<!-- [kr] -->
+<!-- [ko] -->
 다이나믹셀의 기본 `Operating Mode`는 `위치제어 모드(Position Control Mode)`입니다. 그래서 한바퀴를 나타내는 4096의 나머지를 사용하였습니다. 4096의 단위는 다이나믹셀 단위(unit)입니다. 자세한 내용은 각 모터의 컨트롤 테이블을 보아주세요.
 <!-- [common] -->
 
@@ -43,8 +50,8 @@ motor.set_goal_position((dxl_unit + 2000) % 4096)
 
 <!-- [en] -->
 - Next Tutorial: Not yet.
-- [Back to the tutorial front page](TUTORIAL.en.md)
-<!-- [kr] -->
+- [Back to the tutorial front page](TUTORIAL.md)
+<!-- [ko] -->
 - 다음 튜토리얼: 준비되지 않았습니다.
-- [튜토리얼 전체 목차로 돌아가기](TUTORIAL.kr.md)
+- [튜토리얼 전체 목차로 돌아가기](TUTORIAL.md)
 <!-- [common] -->
