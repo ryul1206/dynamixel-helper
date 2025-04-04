@@ -198,6 +198,12 @@ class DxlMotor(object):
             self.port_handler, self.id, self.EEPROM['drive mode'], mode)
         return self.__is_success(dxl_result, dxl_error)
 
+    def get_drive_mode(self) -> int:
+        if self.get_torque() is False:
+            print("Helper: [ERROR] You can edit the EEPROM section ONLY when the torque is disabled.")
+        mode, dxl_result, dxl_error = self.packet_handler.read1ByteTxRx(
+            self.port_handler, self.id, self.EEPROM['drive mode'])
+        return mode, self.__is_success(dxl_result, dxl_error)
 
     def set_operating_mode(self, mode):
         """Change operating mode.(EEPROM)
@@ -207,7 +213,7 @@ class DxlMotor(object):
         Raises:
             ValueError: If input mode is not supported
         """
-        val = (1, 3, 4, 16)
+        val = (0, 1, 3, 4, 5, 16)
         if mode not in val:
             print("Helper: [ERROR] This is incorrect operating mode.")
             print("        Supported modes are: "+str(val))
@@ -292,3 +298,119 @@ class DxlMotor(object):
         position, dxl_result, dxl_error = self.packet_handler.read4ByteTxRx(
             self.port_handler, self.id, self.RAM['present position'])
         return position, self.__is_success(dxl_result, dxl_error)
+
+    def set_profile_velocity(self, dxl_unit):
+        """ Write the profile velocity on CONTROL TABLE
+
+        Args:
+            dxl_unit : 0 ~ 32767
+                - Velocity-based mode : 0.229 [rev/min]
+                - Time-based mode : 0.001 [sec]
+        """
+        dxl_result, dxl_error = self.packet_handler.write4ByteTxRx(
+            self.port_handler, self.id, self.RAM['profile velocity'],
+            dxl_unit)
+        return self.__is_success(dxl_result, dxl_error)
+    
+    def set_profile_acceleration(self, dxl_unit):
+        """ Write the profile acceleration on CONTROL TABLE
+
+        Args:
+            dxl_unit : 0 ~ 32767
+                - Velocity-based mode : 214.577 [rev/min^2]
+                - Time-based mode : 0.001 [sec]
+        """
+        dxl_result, dxl_error = self.packet_handler.write4ByteTxRx(
+            self.port_handler, self.id, self.RAM['profile acceleration'],
+            dxl_unit)
+        return self.__is_success(dxl_result, dxl_error)
+    
+    def set_homing_offset(self, dxl_unit):
+        """ Add homing offset to current Position
+
+        Args: 
+            dxl_unit : 0.08789 [deg] (-255 ~ 255 rev)
+        """
+        dxl_result, dxl_error = self.packet_handler.write4ByteTxRx(
+            self.port_handler, self.id, self.EEPROM['homing offset'],
+            dxl_unit)
+        return self.__is_success(dxl_result, dxl_error)
+    
+    def get_present_current(self):
+        """Read the [present current] from the CONTROL TABLE.
+
+        Return:
+            [0]: <int> This current value is the DxlUnit(1unit == 2.69mA).
+            [1]: <bool> True is a success. False is a fail.
+        """
+        current, dxl_result, dxl_error = self.packet_handler.read2ByteTxRx(
+            self.port_handler, self.id, self.RAM['present current'])
+        return current, self.__is_success(dxl_result, dxl_error)
+
+    def set_current_limit(self, dxl_unit):
+        """ Write the current limit on motor controller
+
+        Args:
+            dxl_unit : 2.69 [mA] (0 ~ 2047)
+        """
+        if self.get_torque() is False:
+            print("Helper: [ERROR] You can edit the EEPROM section ONLY when the torque is disabled.")
+        dxl_result, dxl_error = self.packet_handler.write2ByteTxRx(
+            self.port_handler, self.id, self.EEPROM['current limit'],
+            dxl_unit)
+        return self.__is_success(dxl_result, dxl_error)
+
+    def set_pwm_limit(self, dxl_unit):
+        """ Write the pwm limit on motor controller
+
+        Args:
+            dxl_unit : 0.113 [%] (0 ~ 885)
+        """
+        if self.get_torque() is False:
+            print("Helper: [ERROR] You can edit the EEPROM section ONLY when the torque is disabled.")
+        dxl_result, dxl_error = self.packet_handler.write2ByteTxRx(
+            self.port_handler, self.id, self.EEPROM['pwm limit'],
+            dxl_unit)
+        return self.__is_success(dxl_result, dxl_error)
+    
+    def set_goal_current(self, dxl_unit):
+        """Write the [goal current] on the CONTROL TABLE.
+
+        Args:
+            dxl_unit: 2.69 [mA] (-(Current Limit) ~ (Current Limit))
+        """
+        dxl_result, dxl_error = self.packet_handler.write2ByteTxRx(
+            self.port_handler, self.id, self.RAM['goal current'],
+            dxl_unit)
+        return self.__is_success(dxl_result, dxl_error)
+    
+    def set_goal_pwm(self, dxl_unit):
+        """Write the [goal pwm] on the CONTROL TABLE.
+
+        Args:
+            dxl_unit: 0.113 [%] (-(PWM Limit) ~ (PWM Limit))
+        """
+        dxl_result, dxl_error = self.packet_handler.write2ByteTxRx(
+            self.port_handler, self.id, self.RAM['goal pwm'],
+            dxl_unit)
+        return self.__is_success(dxl_result, dxl_error)
+
+    def set_moving_threshold(self, dxl_unit):
+        if self.get_torque() is False:
+            print("Helper: [ERROR] You can edit the EEPROM section ONLY when the torque is disabled.")
+        dxl_result, dxl_error = self.packet_handler.write4ByteTxRx(
+            self.port_handler, self.id, self.EEPROM['moving threshold'],
+            dxl_unit)
+        return self.__is_success(dxl_result, dxl_error)
+    
+    def moving(self):
+        """Check If motor is moving or not based on moving threshold
+
+        Return:
+            [0]: <bool> True indicates moving motor. False vice versa
+            [1]: <bool> True is a success. False is a fail.
+        """
+        moving, dxl_result, dxl_error = self.packet_handler.read1ByteTxRx(
+            self.port_handler, self.id, self.RAM['moving'])
+        
+        return moving, self.__is_success(dxl_result, dxl_error)

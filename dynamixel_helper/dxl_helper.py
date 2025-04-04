@@ -193,7 +193,7 @@ class DxlHelper(object):
                   .format(name, value))
             raise ValueError
 
-    def get_motor(self, id_):
+    def get_motor(self, id_) -> DxlMotor:
         """Get an instance of the DxlMotor.
 
         Args:
