@@ -9,6 +9,11 @@ OTHER
 TESTED
 -->
 
+## 1.0.3 (2026.07.26)
+
+* **FIXED**: Cap the SDK dependency at `dynamixel_sdk>=3,<4`. This library has only been verified
+  against SDK 3.x; without the cap, new installations silently pick up the recently released 4.x.
+
 ## 1.0.2 (2025.04.04)
 
 * **FIXED**: Fix motor check bug when baudrate is already set (#4)

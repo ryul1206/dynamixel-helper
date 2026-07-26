@@ -1,6 +1,6 @@
 [project]
 name = "dynamixel_helper"
-version = "1.0.2"
+version = "1.0.3"
 description = "A lightweight, intuitive tool that makes Dynamixel control easier—skip the complexity of the official SDK."
 readme = "README.md"
 authors = [
@@ -14,7 +14,7 @@ classifiers = [
     "Programming Language :: Python :: 2",
 ]
 dependencies = [
-    "dynamixel_sdk>=3",
+    "dynamixel_sdk>=3,<4",
 ]
 
 [project.urls]
